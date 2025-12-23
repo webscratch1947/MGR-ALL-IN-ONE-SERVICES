@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MGR ALL IN ONE SERVICES</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --primary:#0a66ff;
+  --dark:#1b1b1b;
+  --light:#f5f7fb;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+  background:var(--light);
+  color:var(--dark);
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 40px;
+  background:#fff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+  position:relative;
+  z-index:10;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand img { height:42px; }
+
+.brand-text .top {
+  font-size:18px;
+  font-weight:bold;
+}
+
+.brand-text .bottom {
+  font-size:13px;
+  letter-spacing:1px;
+  color:#555;
+}
+
+/* ================= HERO ================= */
+.hero {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:40px;
+  padding:60px 40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.hero-left {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.hero-left h1 {
+  font-size:42px;
+  margin-bottom:16px;
+}
+
+.hero-left h1 span { color:var(--primary); }
+
+.desc {
+  max-width:520px;
+  line-height:1.7;
+  margin-bottom:22px;
+}
+
+.features {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-bottom:26px;
+}
+
+.cta-btn {
+  background:var(--primary);
+  color:#fff;
+  padding:14px 28px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  width:fit-content;
+  font-size:15px;
+  transition:all 0.3s ease;
+  display:inline-block;
+}
+
+.cta-btn:hover {
+  background:#0052cc;
+  transform:translateY(-3px);
+  box-shadow:0 10px 20px rgba(10,102,255,0.2);
+}
+
+.hero-right {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.image-grid {
+  width:520px;
+  height:520px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr;
+  gap:10px;
+  overflow:hidden;
+  border-radius:24px;
+}
+
+.image-grid img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform 0.5s ease;
+}
+
+.image-grid img:hover {
+  transform:scale(1.05);
+}
+
+/* ================= WHY CHOOSE US - REDESIGNED ================= */
+.why-choose {
+  padding:80px 40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.why-header h2 {
+  font-size: 36px;
+  margin-bottom: 12px;
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+}
+
+.why-header h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.why-sub {
+  font-size: 18px;
+  color: #666;
+  max-width: 700px;
+  margin: 20px auto 0;
+  line-height: 1.6;
+}
+
+.why-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 35px 25px;
+  text-align: center;
+  transition: all 0.4s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(10,102,255,0.15);
+  border-color: rgba(10,102,255,0.2);
+}
+
+.why-card:hover:before {
+  opacity: 1;
+}
+
+.why-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: rgba(10,102,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: var(--primary);
+  transition: all 0.4s ease;
+}
+
+.why-card:hover .why-icon {
+  background: var(--primary);
+  color: #fff;
+  transform: scale(1.1) rotate(5deg);
+}
+
+.why-card h4 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+.why-card p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 15px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.why-highlight {
+  background: linear-gradient(135deg, var(--primary) 0%, #0052cc 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 15px 35px rgba(10,102,255,0.2);
+}
+
+.highlight-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: white;
+  line-height: 1.3;
+}
+
+.highlight-content p {
+  color: rgba(255,255,255,0.9);
+  line-height: 1.7;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* New stats style - small boxes in a line */
+.highlight-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.stat-item {
+  flex: 1;
+  min-width: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.stat-item h4 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.stat-item p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ================= POPULAR SERVICES - UPDATED ================= */
+.services-section {
+  padding:80px 40px;
+  max-width:1400px;
+  margin:auto;
+}
+
+.services-section h2 {
+  text-align:center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: var(--dark);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.services-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Desktop grid view - 4 COLUMNS */
+.services-grid-desktop {
+  display:grid;
+  grid-template-columns:repeat(4, minmax(220px, 1fr));
+  gap:25px;
+}
+
+/* Mobile container for scrollable row */
+.services-mobile-container {
+  display: none;
+}
+
+/* SERVICE CARDS - MINIMAL TEXT SPACE */
+.service-card {
+  background:#fff;
+  border-radius:16px;
+  padding:0;
+  box-shadow:0 10px 25px rgba(0,0,0,.1);
+  overflow:hidden;
+  transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform:scale(1);
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+  min-height: 240px; /* Reduced height */
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.service-card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover:before {
+  opacity: 1;
+}
+
+/* SCALE ANIMATION ON HOVER */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow:0 20px 40px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.service-card img {
+  width:100%;
+  height:180px; /* Big image */
+  object-fit:cover;
+  margin-bottom:0;
+  transition:transform 0.6s ease;
+}
+
+.service-card:hover img {
+  transform:scale(1.08);
+}
+
+/* VERY SMALL TEXT AREA */
+.service-card h4 {
+  font-size:15px; /* Smaller font */
+  font-weight:600;
+  padding:8px 5px !important; /* Minimal padding */
+  text-align:center;
+  margin:0;
+  flex-grow:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--dark);
+  line-height: 1.3;
+  min-height: 40px !important; /* Very small text area */
+  height: 40px;
+  overflow: hidden;
+}
+
+/* ================= ENHANCED OUR APP ================= */
+.our-app {
+  padding:80px 40px;
+  max-width:1400px;
+  margin:auto;
+  background: linear-gradient(135deg, #0a66ff 0%, #0052cc 100%);
+  border-radius: 20px;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.app-wrapper {
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+
+.app-phone {
+  width:300px;
+  height:600px;
+  background:#000;
+  border-radius:40px;
+  padding:14px;
+  margin: 0 auto;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.app-screen {
+  width:100%;
+  height:100%;
+  background:#fff;
+  border-radius:30px;
+  overflow:hidden;
+}
+
+.app-screen img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.app-content h2 {
+  font-size:32px;
+  margin-bottom:16px;
+  color:white;
+}
+
+.app-content p {
+  font-size:16px;
+  line-height:1.7;
+  color:rgba(255,255,255,0.9);
+  margin-bottom:24px;
+  max-width:600px;
+}
+
+.app-features {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+  margin-bottom:30px;
+}
+
+.app-feature {
+  background:rgba(255,255,255,0.1);
+  padding:14px 16px;
+  border-radius:16px;
+  font-weight:600;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-feature:before {
+  content: "✓";
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.download-btn {
+  display:inline-block;
+  background:white;
+  color:var(--primary);
+  padding:14px 34px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+  font-size:16px;
+  transition:all 0.3s ease;
+}
+
+.download-btn:hover {
+  background:#f5f5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #222;
+  color: white;
+  padding: 40px 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-logo h3 {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.footer-logo p {
+  color: #aaa;
+  line-height: 1.6;
+  font-size: 14px;
+  max-width: 400px;
+}
+
+.footer-links {
+  text-align: right;
+}
+
+.footer-links h3 {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  color: #aaa;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-item:hover {
+  color: white;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.contact-item .icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.contact-item span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 30px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:1200px){
+  .why-container {
+    gap: 30px;
+  }
+  
+  .services-grid-desktop {
+    grid-template-columns:repeat(3, minmax(220px, 1fr));
+    gap: 25px;
+  }
+  
+  .image-grid {
+    width:100%;
+    height:400px;
+  }
+  
+  .footer-content {
+    gap: 60px;
+  }
+}
+
+@media(max-width:1024px){
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .services-grid-desktop {
+    grid-template-columns:repeat(3, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-card {
+    min-height: 220px;
+  }
+  
+  .service-card img {
+    height: 160px;
+  }
+  
+  .service-card h4 {
+    font-size: 14px;
+    min-height: 35px !important;
+  }
+}
+
+/* ================= MOBILE VIEW ================= */
+@media(max-width:768px){
+  .navbar {
+    padding: 14px 20px;
+  }
+  
+  .hero { 
+    grid-template-columns:1fr;
+    padding:40px 20px;
+    text-align:center;
+  }
+  
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .cta-btn {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+  
+  .hero-right { 
+    display:none; 
+  }
+  
+  .app-wrapper { 
+    grid-template-columns:1fr;
+    text-align:center;
+    gap:40px;
+  }
+  
+  .app-features { 
+    grid-template-columns:1fr;
+  }
+  
+  .app-phone { 
+    margin:0 auto 30px;
+    width: 280px;
+    height: 560px;
+  }
+  
+  /* Services Section for Mobile */
+  .services-section {
+    padding: 60px 20px;
+  }
+  
+  .services-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  /* Hide desktop grid on mobile */
+  .services-grid-desktop {
+    display: none;
+  }
+  
+  /* Show mobile container on mobile */
+  .services-mobile-container {
+    display: block;
+  }
+  
+  /* Horizontal scrolling grid for ALL services */
+  .mobile-services-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 10px 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide scrollbar */
+  .mobile-services-grid::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Mobile service cards - MINIMAL TEXT SPACE */
+  .mobile-services-grid .service-card {
+    flex: 0 0 85% !important;
+    max-width: 85% !important;
+    scroll-snap-align: start;
+    min-height: 240px; /* Reduced height */
+    border-radius: 16px;
+    margin: 5px 10px;
+  }
+  
+  .mobile-services-grid .service-card img {
+    height: 180px !important; /* Big image */
+  }
+  
+  /* VERY SMALL TEXT AREA FOR MOBILE */
+  .mobile-services-grid .service-card h4 {
+    font-size: 15px !important;
+    padding: 8px 5px !important; /* Minimal padding */
+    min-height: 40px !important; /* Very small text area */
+    line-height: 1.3;
+    height: 40px;
+    overflow: hidden;
+  }
+  
+  /* Why Choose Us adjustments for mobile */
+  .why-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .why-grid {
+    order: 1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .why-highlight {
+    order: 2;
+    padding: 30px 25px;
+  }
+  
+  .highlight-stats {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .stat-item {
+    min-width: auto;
+    flex: 1;
+    padding: 12px 8px;
+  }
+  
+  .stat-item h4 {
+    font-size: 20px;
+  }
+  
+  .stat-item p {
+    font-size: 13px;
+  }
+  
+  .our-app {
+    padding:50px 20px;
+  }
+  
+  .footer {
+    padding: 30px 20px 15px;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-links {
+    text-align: left;
+  }
+  
+  .contact-item {
+    justify-content: flex-start;
+  }
+  
+  .why-header h2,
+  .services-section h2 {
+    font-size: 28px;
+  }
+  
+  .why-sub {
+    font-size: 16px;
+  }
+}
+
+@media(max-width:480px){
+  .hero-left h1 {
+    font-size: 32px;
+  }
+  
+  /* Mobile cards for small screens */
+  .mobile-services-grid .service-card {
+    flex: 0 0 90% !important;
+    max-width: 90% !important;
+    min-height: 220px;
+    margin: 5px;
+  }
+  
+  .mobile-services-grid .service-card img {
+    height: 160px !important;
+  }
+  
+  .mobile-services-grid .service-card h4 {
+    font-size: 14px !important;
+    padding: 6px 4px !important;
+    min-height: 35px !important;
+  }
+  
+  .app-phone {
+    width: 250px;
+    height: 500px;
+  }
+  
+  .app-content h2 {
+    font-size: 28px;
+  }
+  
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .why-card {
+    padding: 25px 20px;
+  }
+  
+  .why-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+  
+  .why-highlight {
+    padding: 25px 20px;
+  }
+  
+  .highlight-content h3 {
+    font-size: 24px;
+  }
+  
+  .highlight-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+    margin: 5px;
+    padding: 10px 5px;
+  }
+  
+  .stat-item h4 {
+    font-size: 18px;
+  }
+  
+  .stat-item p {
+    font-size: 12px;
+  }
+}
+
+/* Additional fix for very large screens */
+@media(min-width: 1600px) {
+  .services-grid-desktop {
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    justify-content: center;
+  }
+  
+  .service-card img {
+    height: 200px;
+  }
+  
+  .service-card {
+    min-height: 260px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="brand">
+    <img src="MGR LOGO.png">
+    <div class="brand-text">
+      <div class="top">MGR</div>
+      <div class="bottom">ALL IN ONE SERVICES</div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <h1>Professional Services<br><span>Done Right, Every Time</span></h1>
+    <p class="desc">Get access to trained professionals with 3+ years of experience.</p>
+
+    <div class="features">
+      <div>✔ Verified & Skilled Professionals</div>
+      <div>✔ 30+ Home & Commercial Services</div>
+      <div>✔ On-Time & Quality Guaranteed</div>
+    </div>
+
+    <a href="#" class="cta-btn">Book a Service</a>
+  </div>
+
+  <div class="hero-right">
+    <div class="image-grid">
+      <img src="lucid-origin_image_of_a_Caucasian_male_plumber_with_a_strong_jawline_and_worn_hands_wearing_a-0.jpg">
+      <img src="lucid-origin_image_of_a_skilled_carpenter_with_calloused_hands_and_a_worn_denim_apron_standin-0.jpg">
+      <img src="lucid-origin_image_of_a_skilled_electrician_with_a_focused_expression_wearing_a_yellow_hard_h-0.jpg">
+      <img src="image copy.png">
+    </div>
+  </div>
+</section>
+
+<!-- REDESIGNED WHY CHOOSE US -->
+<section class="why-choose">
+  <div class="why-header">
+    <h2>Why Choose Us</h2>
+    <p class="why-sub">Few Reasons to Choose Our Company</p>
+  </div>
+
+  <div class="why-container">
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">✓</div>
+        <h4>Verified Professionals</h4>
+        <p>Background-checked and trained servicemen with proven expertise.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">🛠</div>
+        <h4>3+ Years Experience</h4>
+        <p>Skilled professionals with real-world expertise and hands-on knowledge.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">₹</div>
+        <h4>Low Cost, High Quality</h4>
+        <p>Affordable pricing without compromising on service quality or materials.</p>
+      </div>
+
+      <div class="why-card">
+        <div class="why-icon">📞</div>
+        <h4>24/7 Support</h4>
+        <p>Round-the-clock customer support and service availability whenever you need.</p>
+      </div>
+    </div>
+
+    <div class="why-highlight">
+      <div class="highlight-content">
+        <h3>Your Satisfaction is Our Priority</h3>
+        <p>Choose us for unmatched expertise, exceptional quality, timely service, and a commitment to transforming your space with excellence. We guarantee professional service that exceeds expectations every time.</p>
+        
+        <div class="highlight-stats">
+          <div class="stat-item">
+            <h4>30+</h4>
+            <p>Services</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Quality</p>
+          </div>
+          <div class="stat-item">
+            <h4>24/7</h4>
+            <p>Support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR SERVICES -->
+<section class="services-section">
+  <h2>Our Services</h2>
+  
+  <!-- Desktop Grid View - 4 COLUMNS -->
+  <div class="services-grid-desktop">
+    <div class="service-card">
+      <img src="image copy 2.png">
+      <h4>House Cleaning</h4>
+    </div>
+    <div class="service-card">
+      <img src="lucid-origin_image_of_a_modern_men_s_salon_with_a_sleek_and_minimalist_interior_featuring_a_r-0.jpg">
+      <h4>Men Salon</h4>
+    </div>
+    <div class="service-card">
+      <img src="lucid-origin_image_of_a_skilled_beautician_with_a_pleasant_smile_and_gentle_hands_standing_in-0.jpg">
+      <h4>Beautician</h4>
+    </div>
+    <div class="service-card">
+      <img src="lucid-origin_image_of_a_Caucasian_male_plumber_with_a_strong_jawline_and_worn_hands_wearing_a-0.jpg">
+      <h4>Plumber</h4>
+    </div>
+    <div class="service-card">
+      <img src="lucid-origin_image_of_a_skilled_electrician_with_a_focused_expression_wearing_a_yellow_hard_h-0.jpg">
+      <h4>Electrician</h4>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+      <h4>Appliance Repair</h4>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+      <h4>Painting</h4>
+    </div>
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+      <h4>AC Service</h4>
+    </div>
+  </div>
+  
+  <!-- Mobile View - SINGLE SCROLLABLE ROW -->
+  <div class="services-mobile-container">
+    <div class="mobile-services-grid">
+      <div class="service-card">
+        <img src="image copy 2.png">
+        <h4>House Cleaning</h4>
+      </div>
+      <div class="service-card">
+        <img src="lucid-origin_image_of_a_modern_men_s_salon_with_a_sleek_and_minimalist_interior_featuring_a_r-0.jpg">
+        <h4>Men Salon</h4>
+      </div>
+      <div class="service-card">
+        <img src="lucid-origin_image_of_a_skilled_beautician_with_a_pleasant_smile_and_gentle_hands_standing_in-0.jpg">
+        <h4>Beautician</h4>
+      </div>
+      <div class="service-card">
+        <img src="lucid-origin_image_of_a_Caucasian_male_plumber_with_a_strong_jawline_and_worn_hands_wearing_a-0.jpg">
+        <h4>Plumber</h4>
+      </div>
+      <div class="service-card">
+        <img src="lucid-origin_image_of_a_skilled_electrician_with_a_focused_expression_wearing_a_yellow_hard_h-0.jpg">
+        <h4>Electrician</h4>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+        <h4>Appliance Repair</h4>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+        <h4>Painting</h4>
+      </div>
+      <div class="service-card">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80">
+        <h4>AC Service</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENHANCED OUR APP -->
+<section class="our-app">
+  <div class="app-wrapper">
+    <div class="app-phone">
+      <div class="app-screen">
+        <img src="WhatsApp Image 2025-12-22 at 2.20.24 PM (1).jpeg">
+      </div>
+    </div>
+
+    <div class="app-content">
+      <h2>Download Our App</h2>
+      <p>
+        Book trusted professionals instantly with the MGR All In One Services app.
+        Enjoy low-cost services, easy booking, and 24/7 instant customer support
+        across 30+ home and commercial services.
+      </p>
+
+      <div class="app-features">
+        <div class="app-feature">24/7 Support</div>
+        <div class="app-feature">Instant Booking</div>
+        <div class="app-feature">Low Cost</div>
+        <div class="app-feature">30+ Services</div>
+        <div class="app-feature">Easy to Use</div>
+        <div class="app-feature">Verified Experts</div>
+      </div>
+
+      <a href="https://play.google.com/store/apps/details?id=com.MGR.MGR&hl=en" class="download-btn">Download Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">
+      <h3>MGR ALL IN ONE SERVICES</h3>
+      <p>Professional home and commercial services with verified experts. Quality service guaranteed.</p>
+    </div>
+    
+    <div class="footer-links">
+      <h3>Contact Us</h3>
+      <div class="contact-info">
+        <a href="https://wa.me/919866303104" target="_blank" class="contact-item">
+          <span>Chat On Whatsapp</span>
+          <div class="icon">📱</div>
+        </a>
+        
+        <a href="tel:+919866303104" class="contact-item">
+          <span>+91 98663 03104</span>
+          <div class="icon">📞</div>
+        </a>
+        
+        <a href="mailto:mgrallinoneservices@gmail.com" class="contact-item">
+          <span>mgrallinoneservices@gmail.com</span>
+          <div class="icon">✉️</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; 2025 MGR All In One Services. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    if(targetId === '#') return;
+    
+    const targetElement = document.querySelector(targetId);
+    if(targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Scale animation for service cards
+document.querySelectorAll('.service-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.05)';
+    this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+    this.style.zIndex = '10';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+    this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+    this.style.zIndex = '1';
+  });
+  
+  // For mobile touch devices
+  card.addEventListener('touchstart', function() {
+    this.style.transform = 'scale(1.03)';
+  });
+  
+  card.addEventListener('touchend', function() {
+    this.style.transform = 'scale(1)';
+  });
+});
+
+// Add hover effect to why cards
+document.querySelectorAll('.why-card').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-10px)';
+    this.style.boxShadow = '0 20px 40px rgba(10,102,255,0.15)';
+    this.style.borderColor = 'rgba(10,102,255,0.2)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0)';
+    this.style.boxShadow = '0 8px 25px rgba(0,0,0,0.05)';
+    this.style.borderColor = 'transparent';
+  });
+});
+
+// Add hover effect to stat items
+document.querySelectorAll('.stat-item').forEach(item => {
+  item.addEventListener('mouseenter', function() {
+    this.style.background = 'rgba(255, 255, 255, 0.25)';
+    this.style.transform = 'translateY(-3px)';
+  });
+  
+  item.addEventListener('mouseleave', function() {
+    this.style.background = 'rgba(255, 255, 255, 0.15)';
+    this.style.transform = 'translateY(0)';
+  });
+});
+
+// Add hover effect to contact items
+document.querySelectorAll('.contact-item').forEach(item => {
+  item.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-3px)';
+    this.style.boxShadow = '0 8px 20px rgba(0,0,0,.2)';
+  });
+  
+  item.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0)';
+    this.style.boxShadow = '0 4px 12px rgba(0,0,0,.1)';
+  });
+});
+</script>
+
+</body>
+</html>
